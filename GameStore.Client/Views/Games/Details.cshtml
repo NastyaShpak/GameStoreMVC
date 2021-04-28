@@ -1,0 +1,74 @@
+﻿@model GameStore.Client.Models.GameViewModel
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutPage.cshtml";
+}
+<div class="container my-background my_max_width mt-4 mb-4">
+
+    <div>
+        <div class="container dark-grey-text pt-5">
+            <div class="row wow fadeIn">
+                <div class="col-md-6 mb-4">
+                    <img src="@Html.DisplayFor(model => model.Image)" class="img-fluid" alt="">
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="p-4">
+
+                        <p class="my_font font-weight-bold text-dark">
+                            @Html.DisplayFor(model => model.Name)
+                        </p>
+
+                        <p class="lead font-weight-bold">
+                            @Html.DisplayNameFor(model => model.Price):<span class="font-18 badge purple">
+                                $@Html.DisplayFor(model => model.Price)
+                            </span>
+                        </p>
+
+                        <p class="lead font-weight-bold">
+                            @Html.DisplayNameFor(model => model.Genre):<span class="font-18 badge purple">
+                                @Html.DisplayFor(model => model.Genre)
+                            </span>
+                        </p>
+
+                        <p class="lead font-weight-bold">
+                            @Html.DisplayNameFor(model => model.Developer):<span class="font-18 badge purple">
+                                @Html.DisplayFor(model => model.Developer)
+                            </span>
+                        </p>
+
+                        <p class="lead font-weight-bold">
+                            @Html.DisplayNameFor(model => model.Year):<span class="font-18 badge purple">
+                                @Html.DisplayFor(model => model.Year)
+                            </span>
+                        </p>
+
+                        <p class="lead font-weight-bold">
+                            @Html.DisplayNameFor(model => model.Quantity):<span class="font-18 badge purple">
+                                @Html.DisplayFor(model => model.Quantity)
+                            </span>
+                        </p>
+
+                        <p class="lead font-weight-bold">@Html.DisplayNameFor(model => model.Description)</p>
+                        <p class="font-18">
+                            @Html.DisplayFor(model => model.Description)
+                        </p>
+
+                        <form class="d-flex justify-content-left">
+                            <button class="btn btn-primary btn-md my-0 p waves-effect waves-light" type="submit">
+                                @Html.ActionLink("Add to cart", "Buy", new { id = Model.Id }, new { @class = "text-white" })
+                                <i class="fas fa-shopping-cart ml-1"></i>
+                            </button>
+                            <button class="btn btn-primary btn-md my-0 p waves-effect waves-light ml-3" type="submit">
+                                <span class="span">@Html.ActionLink("Edit", "Edit", new { id = Model.Id })</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p class="d-flex justify-content-end">
+            @Html.ActionLink("Back to List", "Index")
+        </p>
+    </div>
+</div>

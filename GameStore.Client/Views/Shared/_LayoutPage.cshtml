@@ -1,0 +1,39 @@
+﻿@using System.Web.Optimization
+<!DOCTYPE html>
+
+@Styles.Render("~/Content/css")
+@Styles.Render("~/Content/custom")
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/style.css" rel="stylesheet" />
+    <link href="~/Content/my_style.css" rel="stylesheet" />
+</head>
+<body>
+    @{
+        Html.RenderPartial("Header");
+    }
+
+    <div>
+        @RenderBody()
+    </div>
+
+    @{
+        Html.RenderPartial("Footer");
+    }
+
+    <script src="https://kit.fontawesome.com/39c9a805b6.js" crossorigin="anonymous"></script>
+    @*<script src="~/Scripts/jquery-3.0.0.min.js"></script>
+        <script src="~/Scripts/popper.min.js"></script>
+        <script src="~/Scripts/bootstrap.min.js"></script>*@
+    @*<script src="~/Scripts/dashboard-ecommerce.js"></script>
+        <script src="~/Scripts/main-js.js"></script>*@
+    @*<script src="~/Scripts/custom-script.js"></script>*@
+    @Scripts.Render("~/Script/jquery")
+    @Scripts.Render("~/Script/popper")
+    @Scripts.Render("~/Script/bootstrap-min")
+</body>
+</html>

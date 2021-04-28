@@ -1,0 +1,100 @@
+﻿@using System.Web.Optimization
+@{
+    ViewBag.Title = "Account";
+    Layout = "~/Views/Shared/_LayoutPage.cshtml";
+}
+
+@Styles.Render("~/Content/login-register")
+
+<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+    <div class="card influencer-profile-data">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-xl-2 col-lg-4 col-md-4 col-sm-4 col-12">
+                    <div class="text-center">
+                        <img src="https://www.kindpng.com/picc/m/495-4952535_create-digital-profile-icon-blue-user-profile-icon.png" alt="User Avatar" class="rounded-circle user-avatar-xxl">
+                    </div>
+                </div>
+                <div class="col-xl-10 col-lg-8 col-md-8 col-sm-8 col-12">
+                    <div class="user-avatar-info">
+                        <div class="m-b-20">
+                            <div class="user-avatar-name">
+                                <h2 class="mb-1">@ViewBag.Name</h2>
+                            </div>
+                            <div class="d-inline-block">
+                            </div>
+                        </div>
+
+                        <div class="user-avatar-address">
+                            <p class="border-bottom pb-3">
+                                <span class="mb-2 d-xl-inline-block d-block">Joined date: 23 June, 2018 </span>
+                                <span class=" mb-2 d-xl-inline-block d-block ml-xl-4">
+                                    Male
+                                </span>
+                                <span class=" mb-2 d-xl-inline-block d-block ml-xl-4">29 Year Old </span>
+                            </p>
+                            <div class="mt-3">
+                                <a href="#" class="badge badge-light mr-1">Buyer</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+
+        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="d-inline-block m-t-20">
+                        <h2 class="text-primary">My Purchase</h2>
+                    </div>
+                    <div class="float-right icon-circle-medium  icon-box-lg  bg-primary-light mt-1">
+                        <i class="fa fa-shopping-cart fa-fw fa-sm text-primary"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="d-inline-block m-t-20">
+                        <h2 class="text-secondary">Wish List</h2>
+                    </div>
+                    <div class="float-right icon-circle-medium  icon-box-lg  bg-secondary-light mt-1">
+                        <i class="fa fa-heart fa-fw fa-sm text-secondary"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="d-inline-block m-t-20">
+                        <h2 class="text-info">Settings</h2>
+                    </div>
+                    <div class="float-right icon-circle-medium  icon-box-lg  bg-info-light mt-1">
+                        <i class="fa fa-cogs fa-fw fa-sm text-info"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="d-inline-block m-t-20">
+                        <h2 class="text-brand">Add Credit Cart</h2>
+                    </div>
+                    <div class="float-right icon-circle-medium  icon-box-lg  bg-brand-light mt-1">
+                        <i class="fa fa-credit-card fa-fw fa-sm text-brand"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

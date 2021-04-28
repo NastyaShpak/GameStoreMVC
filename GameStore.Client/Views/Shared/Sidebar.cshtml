@@ -1,0 +1,71 @@
+﻿@using System.Web.Optimization
+<div class="menu-sidebar">
+    <div class="menu-sidebar__content">
+        <nav class="navbar-sidebar">
+            <ul class="list-unstyled navbar__list">
+                <li class="nav-item ">
+                    <ul class="navbar-nav flex-column">
+                        <li class="nav-divider my-color font-20">
+                            Filters
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link active" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1">
+                                <i class="fa fa-fw fas fa-stream"></i>Genres
+                            </a>
+                            <div id="submenu-1" class="collapse submenu" style="">
+                                <ul class="nav flex-column">
+                                    @foreach (var item in ViewBag.Genres)
+                                    {
+                                        <li class="nav-item">
+                                            <input onchange="setGenres(event)" type="checkbox" name="@item" id="@item" value="@item" />
+                                            <label for="@item" class="pl-4">@item</label>
+                                        </li>
+                                    }
+
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link active" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-2" aria-controls="submenu-2">
+                                <i class="fa fa-fw fas fa-globe"></i>Developers
+                            </a>
+                            <div id="submenu-2" class="collapse submenu" style="">
+                                <ul class="nav flex-column">
+                                    @foreach (var item in ViewBag.Developers)
+                                    {
+                                        <li class="nav-item">
+                                            <input onchange="setDevelopers(event)" type="checkbox" name="@item" id="@item" value="@item" />
+                                            <label for="@item" class="pl-4">@item</label>
+                                        </li>
+                                    }
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link active" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-3" aria-controls="submenu-3">
+                                <i class="fa fa-fw fas fa-coins"></i>Price
+                            </a>
+                            <div id="submenu-3" class="collapse submenu" style="">
+                                <ul class="nav flex-column">
+                                    <li class="nav-item ">
+                                        <div class="custom-control custom-radio">
+                                            <input type="radio" onclick="sort(event)" class="custom-control-input" id="price_asc" name="price_sort" value="asc">
+                                            <label class="custom-control-label" for="price_asc">Low-High</label>
+                                        </div>
+
+                                        <div class="custom-control custom-radio">
+                                            <input type="radio" onclick="sort(event)" class="custom-control-input" id="price_desc" name="price_sort" value="desc">
+                                            <label class="custom-control-label" for="price_desc">High-Low</label>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+            </ul>
+        </nav>
+    </div>
+</div>
+
+
+@Scripts.Render("~/Script/custom-script")

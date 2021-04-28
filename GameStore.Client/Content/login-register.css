@@ -1,0 +1,19 @@
+﻿* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    height: 50px;
+}
+
+.my-color {
+    color: rgb(89, 105, 255);
+}
